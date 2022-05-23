@@ -1,0 +1,24 @@
+ul{
+    list-style-type: none;
+}
+.boton_Global {
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.boton_Regreso {
+    background-color: grey; 
+color: white; 
+border: 2px solid black;
+}
+.boton_Regreso:hover {
+    background-color: black;
+    color: white;
+}
