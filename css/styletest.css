@@ -48,3 +48,46 @@ p{
     margin: 40px 10px 20px 10px;
     text-align: center;
 }
+html{
+    height: 100%;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(white,black);
+}
+.container{
+    margin: 50px auto;
+    width: 400px;
+    padding: 30px;
+    background: rgba(0,0,0,.5);
+    border-radius: 12px;
+}
+.container h2{
+    margin: 0 0 30px;
+    padding: 0;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+.container .elemento label{
+    color: #fff;
+}
+.container .elemento input{
+    width: 100;
+    padding:10px 0 ;
+    color: #fff;
+    background: solid;
+    border: none;
+}
+.container .elemento input[type="submit"]{
+    background-color: palevioletred;
+    border: none;
+    letter-spacing: 2px;
+    cursor: pointer;
+    padding: 15px;
+    margin-top: 30px;
+}
+.container .elemento input:hover[type="submit"]{
+    background-color: #392ce8;
+}
