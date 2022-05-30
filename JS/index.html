@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id = "encabezado" class="azul">EJEMPLO JAVASCRIPT</h1>
+    <P id="parrafo1">ITESCO</P>
+    <p id="parrafo2" class="azul">Ing. Informatica</p>
+    <p id="parrafo3">Desarrollo Aplicaciones Web</p>
+    <p id="parrafo4" class="azul">30 mayo 2022</p>
+    <script>
+        console.log("Hello World")
+        const encabezadoh1 = document.getElementById("encabezado")
+        // const { innerHTML } = encabezadoh1
+        console.log(encabezadoh1)
+        console.log(encabezadoh1.innerHTML)
+        //console.log("inner: " + innerHTML)
+        console.log("-----------------")
+        const parrafo1 = document.getElementById("parrafo1")
+        console.log(`valor del encabezado: ${encabezadoh1.innerHTML}y el valor del parrafo 1 es: ${parrafo1.innerHTML}`)
+        parrafo1.innerHTML += ' tecnm'
+        console.log(`El  valor del parrafo1 modificado es ${parrafo1.innerHTML}`)
+        const parrafos = document.getElementsByTagName('p')
+        console.log(`Numero de parrafos: ${parrafos.length}`)
+        for(let i = 0; i < parrafos.length; i++ ){
+            console.log(`En el parrafo ${i+1} el valor es: ${parrafos[i].innerHTML}`)
+        }
+        const getElementsByClass = document.getElementsByClassName("azul")
+        console.log(`Numero de elementos de la clase azul: ${getElementsByClass.length}`)
+        for(let i = 0; i < getElementsByClass.length; i++ ){
+            console.log(`En la clase azul el valor es: ${getElementsByClass[i].innerHTML}`)
+        }
+        const getElementsByTypeAndClass = document.querySelectorAll("p.azul")
+        for(item of getElementsByTypeAndClass){
+            console.log(`Valor del parrafo azul: ${item.innerHTML}`)
+        }
+    </script>    
+</body>
+</html>
