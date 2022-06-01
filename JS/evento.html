@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventos</title>
+</head>
+<body>
+    <h1 id="tituloh1">Manejo de eventos</h1>
+    <br>
+    <form id="formulario">
+        Nombre: <input type="text" id="name"/>
+        <br>
+        <br>
+        Apellido: <input type="text" id="lastname"/>
+        <br>
+        <br>
+    </form>
+    <button onclick="mostrarvalor()">mostrar</button>
+    <div id="valores" style="font-size:40px ;"></div>
+    <script>
+        //OBTIENE EL FORMULARIO MEDIANTE EL ID
+        const form1 = document.getElementById("formulario")
+        form1.addEventListener("focus",(evento)=>{
+            evento.target.style.background="red"
+        },true)
+        form1.addEventListener("blur",(evento)=>{
+            evento.target.style.background="white"
+        },true)
+        //form1.addEventListener("length",)
+        function mostrarvalor(){
+            //OBTIENE EL ELEMENTO MEDIANTE EL NOMBRE DEL FORMULARIO
+            const formulario1 = document.forms["formulario"]
+            let texto = ""
+            for(item of formulario1){
+                texto += item.value + ' '
+            }
+            console.log(texto)
+            //OBTENIENDO EL ID DEL DIV MANDAMOS AL HTML A INTRODUCIR TEXTO MEDIANTE LA VARIABLE
+            document.getElementById("valores").innerHTML = texto
+        }
+    </script>
+</body>
+</html>
